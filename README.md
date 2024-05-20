@@ -37,3 +37,42 @@
 - **GIVEN**: Describes the initial conditions or context.
 - **WHEN**: Explains what is happening and needs to be tested.
 - **THEN**: Outlines the expected outcome.
+
+## Flake8
+
+### Configurations
+
+```python
+[flake8]
+max-line-length = 120
+exclude =
+    .git,
+    build,
+    dist,
+    migrations,
+    .venv
+max-complexity = 10
+docstring_style=sphinx
+```
+
+- **max-line-length**: Set maximum allowed line length default: *79*.
+- **exclude**: Comma-separated filename and glob patterns default: *.svn,CVS,.bzr,.hg,.git,__pycache__*.
+- **max-complexity**: McCabe complexity threshold.
+- **docstring_style**: Adhere to the Sphinx docstring style.
+
+### Formatting commands
+
+- Run the **Black** code formatter on the current directory.
+```python
+poetry run black .
+```
+
+- Run the **Isort** tool with the black profile on the current directory.
+```python
+poetry run isort . --profile black
+```
+
+- Run the **Flake8** tool to check compliance with PEP8 (a coding standard) in the current directory.
+```python
+poetry run flake8 .
+```
