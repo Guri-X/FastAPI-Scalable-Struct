@@ -23,3 +23,17 @@
 - **Flake8**: Used to check complaince with PEP8 (a coding standard).
 - **Bandit**: For checking security vulnerabilities in the code.
 - **Safety**: Used to check for any vulnerabilities in the packages.
+
+## Backend API Tests
+
+### Folders
+
+- **Unit**: This will house the unit tests.
+- **Integration**: This will contain the integration tests.
+- **E2E**: This will house the *end-to-end* tests.
+
+### Test notations
+
+- **GIVEN**: Describes the initial conditions or context.
+- **WHEN**: Explains what is happening and needs to be tested.
+- **THEN**: Outlines the expected outcome.
